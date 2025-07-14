@@ -1,0 +1,18 @@
+meta {
+  name: test
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://{{host}}/api/v0/login
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "Email": "user@example.com",
+    "Password": "secret"
+  }
+}
